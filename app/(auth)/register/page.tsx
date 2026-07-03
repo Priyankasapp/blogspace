@@ -1,9 +1,10 @@
 "use client";
 
 import Link from 'next/link';
+import type { FormEvent } from 'react';
 
 export default function RegisterPage() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
 
