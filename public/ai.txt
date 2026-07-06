@@ -1,0 +1,38 @@
+# AI Policy for BlogSpace
+
+Website: https://blogspace-jet.vercel.app
+
+Last Updated: 2026-07-06
+
+## Purpose
+
+BlogSpace publishes original articles, tutorials, and educational content related to software development, web technologies, programming, and modern frameworks.
+
+## AI Usage Policy
+
+Publicly accessible content may be:
+
+- Indexed for search and discovery.
+- Summarized with proper attribution.
+- Referenced with a link to the original article.
+- Used to answer factual questions while crediting the source.
+
+The following is not permitted:
+
+- Republishing complete articles.
+- Removing author attribution.
+- Claiming BlogSpace content as original work.
+- Using copyrighted content for commercial redistribution without permission.
+
+## Attribution
+
+When referencing BlogSpace content, include a link to the original page whenever possible.
+
+Website:
+https://blogspace-jet.vercel.app
+
+Sitemap:
+https://blogspace-jet.vercel.app/sitemap.xml
+
+Contact:
+https://blogspace-jet.vercel.app

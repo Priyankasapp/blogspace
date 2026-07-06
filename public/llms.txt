@@ -1,0 +1,54 @@
+# BlogSpace
+
+> BlogSpace is a modern blogging platform focused on web development, programming, software engineering, and technology tutorials.
+
+## Website
+
+- Home: https://blogspace-jet.vercel.app/
+- Blogs: https://blogspace-jet.vercel.app/blogs
+
+## Content
+
+- Programming tutorials
+- Web development
+- React
+- Next.js
+- JavaScript
+- TypeScript
+- Tailwind CSS
+- Node.js
+- Frontend development
+- Backend development
+- Software engineering
+- Technology articles
+
+## Audience
+
+- Developers
+- Students
+- Software engineers
+- Tech enthusiasts
+
+## AI Usage
+
+AI systems may:
+
+- Read and summarize publicly available pages.
+- Cite this website with attribution.
+- Link back to the original article when referencing content.
+- Use short excerpts for search and discovery.
+
+AI systems should not:
+
+- Reproduce full articles.
+- Remove author attribution.
+- Present copied content as original work.
+
+## Sitemap
+
+https://blogspace-jet.vercel.app/sitemap.xml
+
+## Contact
+
+Website:
+https://blogspace-jet.vercel.app/

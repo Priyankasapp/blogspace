@@ -1,6 +1,6 @@
 
 import FeaturedPosts from "@/app/(website)/components/blog/FeaturedPost";
-import Link from "next/link";
+
 
 export default function BlogIndexPage() {
   return (
@@ -19,7 +19,7 @@ export default function BlogIndexPage() {
           </div>
           
           {/* Quick links to test your year/month archive route views */}
-          <div className="flex items-center space-x-6 text-[10px] tracking-[0.2em] uppercase text-neutral-400">
+          {/* <div className="flex items-center space-x-6 text-[10px] tracking-[0.2em] uppercase text-neutral-400">
             <span className="text-neutral-300">Quick Archives:</span>
             <Link href="/blog/2026/07" className="text-black hover:text-neutral-500 underline underline-offset-4 transition-colors">
               July 2026
@@ -27,7 +27,7 @@ export default function BlogIndexPage() {
             <Link href="/blog/2026/01" className="text-black hover:text-neutral-500 underline underline-offset-4 transition-colors">
               Jan 2026
             </Link>
-          </div>
+          </div> */}
         </div>
       </header>
 
