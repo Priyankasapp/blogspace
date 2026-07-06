@@ -6,25 +6,17 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { 
-  LayoutDashboard, 
-  BookOpen, 
+ 
   Package, 
-  FileText, 
-  BarChart3, 
-  ShoppingBag, 
-  Users, 
+  FileText,  
   Settings, 
   LogOut 
 } from "lucide-react";
 
 const navItems = [
-  { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
-  { name: "Blogs", href: "/blog", icon: FileText },
-  { name: "Products", href: "/shop", icon: Package },
-  { name: "Documentation", href: "/docs", icon: BookOpen },
-  { name: "Analytics", href: "/analytics", icon: BarChart3 },
-  { name: "Orders", href: "/orders", icon: ShoppingBag },
-  { name: "Users", href: "/users", icon: Users },
+  
+  { name: "Blogs", href: "/dashboard/blogs", icon: FileText },
+  { name: "Products", href: "/dashboard/products", icon: Package },
   { name: "Settings", href: "/dashboard/settings", icon: Settings },
 ];
 
