@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { useRef } from "react";
 import Link from "next/link";
 import gsap from "gsap";
@@ -8,7 +9,7 @@ import { useGSAP } from "@gsap/react";
 import { GrainGradient } from "@paper-design/shaders-react";
 
 export default function Hero() {
-  const container = useRef<HTMLElement>(null);
+  const container = useRef<HTMLElement | null>(null);
 
   useGSAP(() => {
     const tl = gsap.timeline();

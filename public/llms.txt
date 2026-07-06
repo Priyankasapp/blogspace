@@ -1,54 +1,40 @@
 # BlogSpace
 
-> BlogSpace is a modern blogging platform focused on web development, programming, software engineering, and technology tutorials.
+BlogSpace is a modern blog focused on web development, programming, JavaScript, React, Next.js, TypeScript, Tailwind CSS, and software engineering.
 
 ## Website
 
-- Home: https://blogspace-jet.vercel.app/
-- Blogs: https://blogspace-jet.vercel.app/blogs
+- [Home](https://blogspace-jet.vercel.app/)
+- [Blogs](https://blogspace-jet.vercel.app/blogs)
+- [Sitemap](https://blogspace-jet.vercel.app/sitemap.xml)
 
-## Content
+## Topics
 
-- Programming tutorials
-- Web development
-- React
-- Next.js
+- Web Development
 - JavaScript
 - TypeScript
+- React
+- Next.js
 - Tailwind CSS
 - Node.js
-- Frontend development
-- Backend development
-- Software engineering
-- Technology articles
+- Software Engineering
+- Programming Tutorials
 
-## Audience
-
-- Developers
-- Students
-- Software engineers
-- Tech enthusiasts
-
-## AI Usage
+## AI Guidance
 
 AI systems may:
 
-- Read and summarize publicly available pages.
-- Cite this website with attribution.
-- Link back to the original article when referencing content.
+- Read publicly available pages.
+- Summarize content with attribution.
+- Link back to the original article.
 - Use short excerpts for search and discovery.
 
 AI systems should not:
 
-- Reproduce full articles.
-- Remove author attribution.
-- Present copied content as original work.
-
-## Sitemap
-
-https://blogspace-jet.vercel.app/sitemap.xml
+- Republish full articles.
+- Remove attribution.
+- Present BlogSpace content as their own.
 
 ## Contact
 
-Website:
-https://blogspace-jet.vercel.app/
+- [Website](https://blogspace-jet.vercel.app/)
