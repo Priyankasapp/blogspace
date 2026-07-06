@@ -40,20 +40,29 @@ export default function Newsletter() {
         </p>
 
         {/* Input Wrapper Group Container */}
-        <form onSubmit={(e) => e.preventDefault()} className="animate-news-form opacity-0 w-full max-w-xl flex border border-black p-1.5 mb-4 bg-white">
-          <input 
-            type="email" 
-            placeholder="Your email address" 
-            required
-            className="w-full px-4 py-3 text-black placeholder-neutral-400 text-sm focus:outline-none"
-          />
-          <button 
-            type="submit" 
-            className="bg-black text-white px-8 py-3 text-sm font-medium tracking-wide transition-colors hover:bg-neutral-800 shrink-0"
-          >
-            Subscribe
-          </button>
-        </form>
+        <form
+  onSubmit={(e) => e.preventDefault()}
+  className="animate-news-form opacity-0 w-full max-w-xl flex border border-black p-1.5 mb-4 bg-white"
+>
+  <label htmlFor="newsletter-email" className="sr-only">
+    Email address
+  </label>
+
+  <input
+    id="newsletter-email"
+    type="email"
+    placeholder="Your email address"
+    required
+    className="w-full px-4 py-3 text-black placeholder-neutral-400 text-sm focus:outline-none"
+  />
+
+  <button
+    type="submit"
+    className="bg-black text-white px-8 py-3 text-sm font-medium tracking-wide transition-colors hover:bg-neutral-800 shrink-0"
+  >
+    Subscribe
+  </button>
+</form>
 
         <span className="animate-news-footer opacity-0 text-[0.65rem] tracking-[2px] font-medium text-neutral-400 uppercase">
           NO SPAM. JUST PURE TECHNICAL QUALITY.
