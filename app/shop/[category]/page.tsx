@@ -1,56 +1,91 @@
 import Link from "next/link";
+import Image from "next/image";
+import { CURATED_PRODUCTS } from "@/public/assets";
 
-type Props = { params: Promise<{ category: string }> };
-
-// Mock Database structured by Category keys
-const mockProductsDatabase: { [key: string]: Array<{ slug: string; title: string; price: string }> } = {
-  "apparel": [
-    { slug: "heavyweight-tee", title: "Boxy Studio Tee", price: "$65.00" },
-    { slug: "minimalist-hoodie", title: "Editorial Knit Hoodie", price: "$145.00" }
-  ],
-  "digital-templates": [
-    { slug: "editorial-portfolio", title: "Minimalist Portfolio System", price: "$89.00" },
-    { slug: "saas-dashboard-kit", title: "Console Workspace UI Kit", price: "$120.00" }
-  ],
-  "print-magazines": [
-    { slug: "issue-01-trends", title: "Issue 01: Typographic Spacing", price: "$32.00" }
-  ]
+type Props = {
+  params: Promise<{
+    category: string;
+  }>;
 };
 
 export default async function ShopCategoryPage({ params }: Props) {
   const { category } = await params;
-  const products = mockProductsDatabase[category] || [];
-  const cleanCategoryTitle = category.replace(/-/g, " ").toUpperCase();
+
+  const products = CURATED_PRODUCTS.filter(
+    (product) => product.category === category
+  );
+
+  const cleanCategoryTitle =
+    category.charAt(0).toUpperCase() +
+    category.slice(1).replace(/-/g, " ");
 
   return (
-    <main className="w-full bg-white px-6 md:px-12 py-16 font-editorial-sans max-w-7xl mx-auto selection:bg-black selection:text-white">
+    <main className="w-full bg-white px-6 md:px-12 py-16 max-w-7xl mx-auto">
       <div className="space-y-12">
-        <header className="border-b border-neutral-100 pb-6 flex items-end justify-between">
-          <div className="space-y-2">
-            <Link href="/shop" className="text-[9px] tracking-[0.25em] text-neutral-400 hover:text-black uppercase">← All Departments</Link>
-            <h1 className="font-editorial-serif text-3xl uppercase tracking-wide text-neutral-900">{cleanCategoryTitle}</h1>
-          </div>
+        <header className="border-b border-neutral-200 pb-6">
+          <Link
+            href="/shop"
+            className="text-sm text-neutral-500 hover:text-black"
+          >
+            ← Back to Shop
+          </Link>
+
+          <h1 className="mt-4 text-4xl font-bold font-serif">
+            {cleanCategoryTitle}
+          </h1>
         </header>
 
         {products.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((prod) => (
-              <div key={prod.slug} className="border border-neutral-100 p-6 flex flex-col justify-between bg-white">
-                <div className="aspect-[4/5] bg-neutral-50 border border-neutral-100/50 mb-6 flex items-center justify-center font-editorial-serif text-neutral-300 italic text-sm font-light">
-                  Product Preview Image
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {products.map((product) => (
+              <div
+                key={product.id}
+                className="border border-neutral-200 p-5 bg-white"
+              >
+                <div className="relative aspect-[4/5] mb-6 overflow-hidden bg-neutral-100">
+                  <Image
+                    src={product.imageSrc}
+                    alt={product.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <div className="flex justify-between items-start mb-4">
-                  <h2 className="font-editorial-serif text-xl text-neutral-900 uppercase tracking-wide">{prod.title}</h2>
-                  <span className="text-xs font-mono text-neutral-500 font-medium">{prod.price}</span>
+
+                <p className="text-xs uppercase tracking-widest text-neutral-500">
+                  {product.category}
+                </p>
+
+                <h2 className="mt-2 text-2xl font-serif font-bold">
+                  {product.title}
+                </h2>
+
+                <p className="mt-3 text-sm text-neutral-500 line-clamp-2">
+                  {product.description}
+                </p>
+
+                <div className="mt-5 flex items-center justify-between">
+                  <span className="font-semibold">{product.price}</span>
+
+                  <Link
+                    href={`/shop/${product.category}/${product.slug}`}
+                    className="px-5 py-2 border border-black hover:bg-black hover:text-white transition"
+                  >
+                    View
+                  </Link>
                 </div>
-                <Link href={`/shop/${category}/${prod.slug}`} className="w-full text-center bg-black text-white py-3 text-[9px] font-medium tracking-[0.25em] uppercase hover:bg-neutral-800 transition-colors">
-                  View Product Details
-                </Link>
               </div>
             ))}
           </div>
         ) : (
-          <p className="text-neutral-400 text-xs tracking-widest uppercase py-12">No assets found matching this node category identifier.</p>
+          <div className="py-20 text-center">
+            <h2 className="text-2xl font-serif">
+              No products found
+            </h2>
+
+            <p className="mt-3 text-neutral-500">
+              There are no products in this category.
+            </p>
+          </div>
         )}
       </div>
     </main>
