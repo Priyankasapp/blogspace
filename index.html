@@ -3,439 +3,389 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Blogs Management | Marketplace Admin</title>
-<!-- Tailwind CSS -->
+<title>Settings | BlogSpace Admin</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Design System Configuration -->
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-background": "#1c1b1b",
-                    "tertiary": "#000000",
-                    "secondary-container": "#e1dfdf",
-                    "on-tertiary": "#ffffff",
-                    "inverse-surface": "#313030",
-                    "inverse-primary": "#c8c6c5",
-                    "secondary-fixed-dim": "#c7c6c6",
-                    "on-error": "#ffffff",
-                    "surface-container-lowest": "#ffffff",
-                    "on-tertiary-fixed": "#1c1b1a",
-                    "surface": "#fdf8f8",
-                    "primary-fixed": "#e5e2e1",
-                    "surface-variant": "#e5e2e1",
-                    "primary": "#000000",
-                    "on-surface-variant": "#444748",
-                    "error-container": "#ffdad6",
-                    "primary-fixed-dim": "#c8c6c5",
-                    "outline-variant": "#c4c7c7",
-                    "tertiary-fixed": "#e6e2df",
-                    "inverse-on-surface": "#f4f0ef",
-                    "surface-dim": "#ddd9d8",
-                    "on-error-container": "#93000a",
-                    "surface-container-highest": "#e5e2e1",
-                    "on-tertiary-fixed-variant": "#484645",
-                    "secondary-fixed": "#e4e2e2",
-                    "on-primary-fixed": "#1c1b1b",
-                    "on-tertiary-container": "#868382",
-                    "on-secondary-container": "#626262",
-                    "surface-container-high": "#ebe7e6",
-                    "surface-container": "#f1edec",
-                    "secondary": "#5e5e5e",
-                    "on-surface": "#1c1b1b",
-                    "on-secondary-fixed": "#1b1c1c",
-                    "error": "#ba1a1a",
-                    "surface-tint": "#5f5e5e",
-                    "on-primary-fixed-variant": "#474746",
-                    "primary-container": "#1c1b1b",
-                    "on-primary-container": "#858383",
-                    "tertiary-fixed-dim": "#cac6c4",
-                    "tertiary-container": "#1c1b1a",
-                    "surface-bright": "#fdf8f8",
-                    "on-secondary": "#ffffff",
-                    "outline": "#747878",
-                    "background": "#fdf8f8",
-                    "on-primary": "#ffffff",
-                    "on-secondary-fixed-variant": "#464747",
-                    "surface-container-low": "#f7f3f2"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "unit": "8px",
-                    "container-max": "1280px",
-                    "margin-mobile": "20px",
-                    "margin-desktop": "64px",
-                    "gutter": "32px"
-            },
-            "fontFamily": {
-                    "label-mono": ["JetBrains Mono"],
-                    "headline-md": ["\"Source Serif 4\""],
-                    "body-lg": ["Inter"],
-                    "display-lg-mobile": ["\"Source Serif 4\""],
-                    "display-lg": ["\"Source Serif 4\""],
-                    "body-md": ["Inter"],
-                    "headline-sm": ["\"Source Serif 4\""]
-            },
-            "fontSize": {
-                    "label-mono": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                    "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
-                    "display-lg-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
-            }
-          },
-        },
-      }
-    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@600;700&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&family=Source+Serif+4:wght@100..900&display=swap" rel="stylesheet"/>
 <style>
         .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
-            line-height: 1;
         }
         body {
-            background-color: #fdf8f8;
-            color: #1c1b1b;
+            font-family: 'Inter', sans-serif;
             -webkit-font-smoothing: antialiased;
         }
-        .editorial-shadow {
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
         }
-        .table-row-hover:hover {
-            background-color: #f7f3f2;
+        .settings-card {
+            border-bottom: 1px solid #e5e5e5;
+            transition: border-color 0.1s ease;
+        }
+        .settings-card:hover {
+            border-color: #1a1a1a;
         }
     </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1c1b1b",
+                        "tertiary": "#000000",
+                        "secondary-container": "#e1dfdf",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "inverse-primary": "#c8c6c5",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#1c1b1a",
+                        "surface": "#fdf8f8",
+                        "primary-fixed": "#e5e2e1",
+                        "surface-variant": "#e5e2e1",
+                        "primary": "#000000",
+                        "on-surface-variant": "#444748",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "outline-variant": "#c4c7c7",
+                        "tertiary-fixed": "#e6e2df",
+                        "inverse-on-surface": "#f4f0ef",
+                        "surface-dim": "#ddd9d8",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#484645",
+                        "secondary-fixed": "#e4e2e2",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-tertiary-container": "#868382",
+                        "on-secondary-container": "#626262",
+                        "surface-container-high": "#ebe7e6",
+                        "surface-container": "#f1edec",
+                        "secondary": "#5e5e5e",
+                        "on-surface": "#1c1b1b",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#5f5e5e",
+                        "on-primary-fixed-variant": "#474746",
+                        "primary-container": "#1c1b1b",
+                        "on-primary-container": "#858383",
+                        "tertiary-fixed-dim": "#cac6c4",
+                        "tertiary-container": "#1c1b1a",
+                        "surface-bright": "#fdf8f8",
+                        "on-secondary": "#ffffff",
+                        "outline": "#747878",
+                        "background": "#fdf8f8",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#464747",
+                        "surface-container-low": "#f7f3f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["\"Source Serif 4\""],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["\"Source Serif 4\""]
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="font-body-md text-body-md overflow-x-hidden">
-<!-- SideNavBar Anchor -->
-<aside class="w-64 h-screen fixed left-0 top-0 flex flex-col h-full p-unit bg-surface border-r border-outline-variant z-50 transition-all duration-100 ease-in-out">
-<div class="px-4 py-6 mb-8">
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container">
+<!-- Side Navigation Shell -->
+<aside class="w-64 h-screen fixed left-0 top-0 bg-surface border-r border-outline-variant flex flex-col p-4 z-50">
+<div class="mb-10 px-2">
 <h1 class="font-headline-sm text-headline-sm font-bold text-primary">Marketplace</h1>
-<p class="font-label-mono text-label-mono text-secondary mt-1">Admin Console</p>
+<p class="text-xs text-secondary tracking-widest font-label-mono uppercase mt-1">Admin Console</p>
 </div>
-<nav class="flex-1 space-y-1 px-2">
-<!-- Dashboard -->
-<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors font-body-md rounded-lg" href="#">
 <span class="material-symbols-outlined">dashboard</span>
-<span class="font-body-md">Dashboard</span>
+<span>Dashboard</span>
 </a>
-<!-- Blogs - ACTIVE -->
-<a class="flex items-center gap-3 px-3 py-2 bg-secondary-container text-primary font-semibold rounded-lg" href="#">
+<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors font-body-md rounded-lg" href="#">
 <span class="material-symbols-outlined">article</span>
-<span class="font-body-md">Blogs</span>
+<span>Blogs</span>
 </a>
-<!-- Products -->
-<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors font-body-md rounded-lg" href="#">
 <span class="material-symbols-outlined">inventory_2</span>
-<span class="font-body-md">Products</span>
+<span>Products</span>
 </a>
-<!-- Documentation -->
-<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors font-body-md rounded-lg" href="#">
 <span class="material-symbols-outlined">menu_book</span>
-<span class="font-body-md">Documentation</span>
+<span>Documentation</span>
 </a>
-<!-- Analytics -->
-<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors font-body-md rounded-lg" href="#">
 <span class="material-symbols-outlined">analytics</span>
-<span class="font-body-md">Analytics</span>
+<span>Analytics</span>
 </a>
-<!-- Orders -->
-<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors font-body-md rounded-lg" href="#">
 <span class="material-symbols-outlined">shopping_bag</span>
-<span class="font-body-md">Orders</span>
+<span>Orders</span>
 </a>
-<!-- Users -->
-<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors font-body-md rounded-lg" href="#">
 <span class="material-symbols-outlined">group</span>
-<span class="font-body-md">Users</span>
+<span>Users</span>
 </a>
-<!-- Settings -->
-<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<!-- Active State -->
+<a class="flex items-center gap-3 px-3 py-2 bg-secondary-container text-primary font-semibold rounded-lg" href="#">
 <span class="material-symbols-outlined">settings</span>
-<span class="font-body-md">Settings</span>
+<span>Settings</span>
 </a>
 </nav>
-<div class="px-2 mt-auto pb-4">
-<button class="w-full flex items-center gap-3 px-3 py-2 text-error hover:bg-error-container/20 transition-colors rounded-lg">
+<div class="mt-auto border-t border-outline-variant pt-4">
+<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary transition-colors font-body-md" href="#">
 <span class="material-symbols-outlined">logout</span>
-<span class="font-body-md">Logout</span>
-</button>
+<span>Logout</span>
+</a>
 </div>
 </aside>
-<!-- Main Content Area -->
-<main class="ml-64 flex flex-col min-h-screen">
-<!-- TopNavBar Anchor -->
-<header class="sticky top-0 z-40 bg-surface/80 backdrop-blur-md border-b border-outline-variant flex items-center justify-between h-16 px-margin-desktop transition-opacity duration-150">
-<div class="flex items-center flex-1 max-w-xl">
-<div class="relative w-full">
-<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-secondary">
-<span class="material-symbols-outlined text-[20px]">search</span>
+<!-- Top Navigation -->
+<header class="sticky top-0 z-40 bg-surface/80 backdrop-blur-md border-b border-outline-variant ml-64 flex items-center justify-between h-16 px-12">
+<div class="flex items-center gap-8">
+<div class="relative group">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-secondary group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
 </span>
-<input class="block w-full pl-10 pr-3 py-2 border-none bg-surface-container-low rounded-full font-body-md focus:ring-1 focus:ring-primary text-on-background placeholder:text-secondary/60" placeholder="Search blog posts..." type="text"/>
+<input class="bg-surface-container-low border-none rounded-full pl-10 pr-4 py-1.5 text-sm focus:ring-1 focus:ring-primary w-64 transition-all" placeholder="Search settings..." type="text"/>
 </div>
+<nav class="flex items-center gap-6">
+<a class="text-secondary hover:text-primary font-body-md transition-opacity" href="#">Docs</a>
+<a class="text-secondary hover:text-primary font-body-md transition-opacity" href="#">Help</a>
+<a class="text-secondary hover:text-primary font-body-md transition-opacity" href="#">Status</a>
+</nav>
 </div>
-<div class="flex items-center gap-6">
-<div class="hidden md:flex items-center gap-6">
-<a class="text-secondary hover:text-primary font-body-md transition-colors" href="#">Docs</a>
-<a class="text-secondary hover:text-primary font-body-md transition-colors" href="#">Help</a>
-<a class="text-secondary hover:text-primary font-body-md transition-colors" href="#">Status</a>
-</div>
-<div class="flex items-center gap-4 border-l border-outline-variant pl-6">
-<button class="text-secondary hover:text-primary transition-colors">
-<span class="material-symbols-outlined">notifications</span>
-</button>
-<button class="text-secondary hover:text-primary transition-colors">
+<div class="flex items-center gap-4">
+<button class="p-2 text-secondary hover:text-primary transition-colors">
 <span class="material-symbols-outlined">contrast</span>
 </button>
-<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
-<img class="w-full h-full object-cover" data-alt="Professional corporate headshot of a female administrator with a neutral expression, clean lighting, high resolution, minimalist aesthetic in a modern studio environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5k7gRtBQPrqn6XjahUDFZPIjtEFzqzS15tzGugZJDAkMJrYDe-CuPHUabV5buVeokYyn6hJErM5SH41TCUZ5I7JptbWHlK4hfK900vzeTx5RiZSwbJgZKJmiLw_kHl_fi0jNQHhJQNKUWrd41AIDwxbO60Pufng_2sjc4tpMUKokYhYeb6tQzHjrqp-w0Z9Ys2qhb7fkq7i5uX2Q4ZBHuHQfJGC8MWIqPlXcYwy1KyIyujandPJQx6cfBtBpk4NLOfBs820hG0fta"/>
-</div>
+<button class="p-2 text-secondary hover:text-primary transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A clean, professional headshot of a developer administrator in a minimalist studio environment. The lighting is soft and natural, with a neutral gray background that emphasizes a high-end, editorial feel. The subject wears a simple black knit sweater, projecting an aura of quiet authority and technical expertise consistent with the 'Digital Quietude' brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLrdddVBXmkilHtG_DLcXfm9ECsJq0fEX5MgHUSdfdEvEo1FsUHefnfq7OrepVcr-ki6Rz2V5-Rh9wQdhBOUkdV9J9kWyRYcHL-JrUBwgCuLe6Xp8haPoAiD11Rl_deijdpn9lP78TyJPsV0rqOQNAAy2pci9m0C6EwBkn61GKlz9ezy3pWJuKVqbJuFUM2GA2qSD5jeEUTZS982wR2hRWPEoOd5TOpRHMXjeU2rI6hhlfGGgb6fPe2FvDTkGSDK4iZDRq-5Q9UBOx"/>
 </div>
 </div>
 </header>
-<!-- Canvas Content -->
-<section class="p-margin-desktop flex-1">
-<!-- Page Header -->
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-<div class="max-w-2xl">
-<h2 class="font-display-lg text-display-lg text-on-background leading-tight">Editorial Management</h2>
-<p class="font-body-lg text-body-lg text-secondary mt-4 max-w-lg">Manage, edit, and publish your technical blog content across the marketplace ecosystem.</p>
+<!-- Main Content -->
+<main class="ml-64 p-12 min-h-screen">
+<div class="max-w-[1000px] mx-auto">
+<header class="mb-12">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Settings</h2>
+<p class="text-secondary font-body-lg">Manage your account preferences, security, and integration keys.</p>
+</header>
+<div class="flex gap-16">
+<!-- Sub-Navigation -->
+<aside class="w-48 flex-shrink-0">
+<nav class="flex flex-col space-y-4">
+<button class="text-left font-body-md text-primary font-bold border-l-2 border-primary pl-4 py-1 transition-all" id="btn-profile" onclick="switchTab('profile')">Profile</button>
+<button class="text-left font-body-md text-secondary hover:text-primary border-l-2 border-transparent pl-4 py-1 transition-all" id="btn-password" onclick="switchTab('password')">Password</button>
+<button class="text-left font-body-md text-secondary hover:text-primary border-l-2 border-transparent pl-4 py-1 transition-all" id="btn-notifications" onclick="switchTab('notifications')">Notifications</button>
+<button class="text-left font-body-md text-secondary hover:text-primary border-l-2 border-transparent pl-4 py-1 transition-all" id="btn-appearance" onclick="switchTab('appearance')">Appearance</button>
+<button class="text-left font-body-md text-secondary hover:text-primary border-l-2 border-transparent pl-4 py-1 transition-all" id="btn-billing" onclick="switchTab('billing')">Billing</button>
+<button class="text-left font-body-md text-secondary hover:text-primary border-l-2 border-transparent pl-4 py-1 transition-all" id="btn-api" onclick="switchTab('api')">API Keys</button>
+</nav>
+</aside>
+<!-- Content Area -->
+<div class="flex-1 space-y-16">
+<!-- Profile Section -->
+<section class="tab-content space-y-8" id="tab-profile">
+<div class="settings-card pb-8">
+<h3 class="font-headline-sm text-headline-sm mb-6">Profile Information</h3>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-label-mono text-xs uppercase tracking-wider text-secondary">First Name</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 transition-colors" type="text" value="Alexander"/>
 </div>
-<div>
-<button class="bg-primary text-on-primary px-8 py-3 rounded-lg font-body-md font-semibold hover:bg-tertiary transition-all duration-100 flex items-center gap-2 editorial-shadow">
-<span class="material-symbols-outlined">add</span>
-                        Create Blog
-                    </button>
+<div class="space-y-2">
+<label class="font-label-mono text-xs uppercase tracking-wider text-secondary">Last Name</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 transition-colors" type="text" value="Hamilton"/>
 </div>
+<div class="col-span-2 space-y-2">
+<label class="font-label-mono text-xs uppercase tracking-wider text-secondary">Email Address</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 transition-colors" type="email" value="alexander.h@blogspace.io"/>
 </div>
-<!-- Stats/Metrics High-Level -->
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-12">
-<div class="bg-surface p-6 border border-outline-variant rounded-xl transition-all hover:border-primary">
-<p class="font-label-mono text-label-mono text-secondary uppercase mb-2">Total Posts</p>
-<p class="font-headline-sm text-headline-sm">1,284</p>
-</div>
-<div class="bg-surface p-6 border border-outline-variant rounded-xl transition-all hover:border-primary">
-<p class="font-label-mono text-label-mono text-secondary uppercase mb-2">Published</p>
-<p class="font-headline-sm text-headline-sm">842</p>
-</div>
-<div class="bg-surface p-6 border border-outline-variant rounded-xl transition-all hover:border-primary">
-<p class="font-label-mono text-label-mono text-secondary uppercase mb-2">Drafts</p>
-<p class="font-headline-sm text-headline-sm">412</p>
-</div>
-<div class="bg-surface p-6 border border-outline-variant rounded-xl transition-all hover:border-primary">
-<p class="font-label-mono text-label-mono text-secondary uppercase mb-2">Monthly Views</p>
-<p class="font-headline-sm text-headline-sm">45.2k</p>
-</div>
-</div>
-<!-- Management Table (Stripe-like) -->
-<div class="bg-surface border border-outline-variant rounded-xl overflow-hidden mb-12 editorial-shadow">
-<div class="overflow-x-auto">
-<table class="w-full text-left border-collapse">
-<thead class="bg-surface-container-low border-b border-outline-variant">
-<tr>
-<th class="px-6 py-4 font-label-mono text-label-mono text-secondary">Cover</th>
-<th class="px-6 py-4 font-label-mono text-label-mono text-secondary">Blog Title</th>
-<th class="px-6 py-4 font-label-mono text-label-mono text-secondary">Category</th>
-<th class="px-6 py-4 font-label-mono text-label-mono text-secondary">Author</th>
-<th class="px-6 py-4 font-label-mono text-label-mono text-secondary">Status</th>
-<th class="px-6 py-4 font-label-mono text-label-mono text-secondary">Publish Date</th>
-<th class="px-6 py-4 font-label-mono text-label-mono text-secondary text-right">Actions</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-outline-variant">
-<!-- Row 1 -->
-<tr class="table-row-hover transition-colors group">
-<td class="px-6 py-6">
-<div class="w-16 h-10 rounded overflow-hidden bg-surface-container border border-outline-variant">
-<img class="w-full h-full object-cover" data-alt="A clean, minimalist architectural photography of a modern concrete building against a bright clear sky, captured in a high-key light-mode aesthetic with strong geometric shadows. The image feels professional, intellectual, and high-end." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdWwMISAjPhMVe28vM9GAKoIFX3jfqRQOTcWjHtPfEwCIG07Bt-vESDl7_4Q-zDT0mCn579wsj2ICtKOpRQ9d3PThgfQwuoUuID-Vkeuo7bu4lFGraq01ZDs8dj_qLkX5BDVcWTZRk8Qea5GeFjYMFexJ9PKagYntCu3wQB-tRgNK5Uy5sUVsrmOuMdIeCRQq2ITnlevoTGSWlsCTeKIBquLbrrPbwa--2bTv8vkJAN01cLVbWOkQKWuTKvYg_xDef7ZUwYn7vMIj-"/>
-</div>
-</td>
-<td class="px-6 py-6">
-<span class="font-body-md font-semibold text-primary block">Scaling Microservices with Rust</span>
-<span class="font-label-mono text-[12px] text-secondary">ID: BLOG-9921</span>
-</td>
-<td class="px-6 py-6">
-<span class="px-2 py-1 bg-surface-container-high rounded text-label-mono text-[11px] text-on-surface-variant uppercase">Architecture</span>
-</td>
-<td class="px-6 py-6">
-<div class="flex items-center gap-2">
-<div class="w-6 h-6 rounded-full bg-secondary-container"></div>
-<span class="text-secondary">Alex Rivera</span>
-</div>
-</td>
-<td class="px-6 py-6">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-<span class="w-1.5 h-1.5 rounded-full bg-green-600"></span>
-                                        Live
-                                    </span>
-</td>
-<td class="px-6 py-6 text-secondary">Oct 12, 2023</td>
-<td class="px-6 py-6 text-right">
-<button class="text-secondary hover:text-primary transition-colors">
-<span class="material-symbols-outlined">more_horiz</span>
-</button>
-</td>
-</tr>
-<!-- Row 2 -->
-<tr class="table-row-hover transition-colors group">
-<td class="px-6 py-6">
-<div class="w-16 h-10 rounded overflow-hidden bg-surface-container border border-outline-variant">
-<img class="w-full h-full object-cover" data-alt="Abstract digital artwork with flowing organic lines in grayscale tones, representing fluid dynamics and data flow in a sophisticated, minimalist editorial style. High contrast between deep charcoal and soft white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDfNPsiWUOOUGrabAvCD42PVOGMUfEKxQwGEIm_BWRyn8uN48HUPcrNLe45oMnQ47a67awdmCuvqJ65-0zaYj3IZu8A5IwQnWcsX-kW75xu-3Vul6Wl6JNiyGKbwd6JHzezrKlDkLEwMMLP1P-z8znl3kgG8VDKnypeHLUBy27X3MPRkk7KuuIqhwu4kY4c87me-bHGbsAHFgpnWHze6j6zmfxAN-0tdV6tEmQSOjKHJWKqVJHi5tCRPglfX-rZW--HPtUon3oP4JU"/>
-</div>
-</td>
-<td class="px-6 py-6">
-<span class="font-body-md font-semibold text-primary block">Understanding Zero-Knowledge Proofs</span>
-<span class="font-label-mono text-[12px] text-secondary">ID: BLOG-8842</span>
-</td>
-<td class="px-6 py-6">
-<span class="px-2 py-1 bg-surface-container-high rounded text-label-mono text-[11px] text-on-surface-variant uppercase">Cryptography</span>
-</td>
-<td class="px-6 py-6">
-<div class="flex items-center gap-2">
-<div class="w-6 h-6 rounded-full bg-secondary-container"></div>
-<span class="text-secondary">Sarah Jenkins</span>
-</div>
-</td>
-<td class="px-6 py-6">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
-<span class="w-1.5 h-1.5 rounded-full bg-orange-600"></span>
-                                        Draft
-                                    </span>
-</td>
-<td class="px-6 py-6 text-secondary">—</td>
-<td class="px-6 py-6 text-right">
-<button class="text-secondary hover:text-primary transition-colors">
-<span class="material-symbols-outlined">more_horiz</span>
-</button>
-</td>
-</tr>
-<!-- Row 3 -->
-<tr class="table-row-hover transition-colors group">
-<td class="px-6 py-6">
-<div class="w-16 h-10 rounded overflow-hidden bg-surface-container border border-outline-variant">
-<img class="w-full h-full object-cover" data-alt="Minimalist top-down photograph of a workspace with a single high-end mechanical keyboard and a matte black coffee cup on a light gray desk, highlighting focus, craftsmanship, and productivity in a quiet digital environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgw09YICUaxmxlFi1bCmZdQ5M5tz4fwBvcZm67s4FcIbE9wELKT7fwhQksdC3wJL1nTBjhwSdNQS4uF0r7xK1etdMjk000nSvM-IsHMVg1pCzTh-GBMjfCCZzCorY6zFcFLewDT7T5ZVGHfFgElZmIRjFB0JVzQPTmB9V48pAmpjnuRikGXr2_qvW4k9OyBDY8dGFfYv8bvSiuwLd3DimY8xAmC3qs9ITgNnc1gWsXfB0nRav_ThK6jIClHVmP3XTOZdOlJv-ZS-7Z"/>
-</div>
-</td>
-<td class="px-6 py-6">
-<span class="font-body-md font-semibold text-primary block">The Developer Experience Gap</span>
-<span class="font-label-mono text-[12px] text-secondary">ID: BLOG-7231</span>
-</td>
-<td class="px-6 py-6">
-<span class="px-2 py-1 bg-surface-container-high rounded text-label-mono text-[11px] text-on-surface-variant uppercase">DevRel</span>
-</td>
-<td class="px-6 py-6">
-<div class="flex items-center gap-2">
-<div class="w-6 h-6 rounded-full bg-secondary-container"></div>
-<span class="text-secondary">Marcus Chen</span>
-</div>
-</td>
-<td class="px-6 py-6">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-<span class="w-1.5 h-1.5 rounded-full bg-green-600"></span>
-                                        Live
-                                    </span>
-</td>
-<td class="px-6 py-6 text-secondary">Sep 28, 2023</td>
-<td class="px-6 py-6 text-right">
-<button class="text-secondary hover:text-primary transition-colors">
-<span class="material-symbols-outlined">more_horiz</span>
-</button>
-</td>
-</tr>
-<!-- Row 4 -->
-<tr class="table-row-hover transition-colors group">
-<td class="px-6 py-6">
-<div class="w-16 h-10 rounded overflow-hidden bg-surface-container border border-outline-variant">
-<img class="w-full h-full object-cover" data-alt="Macro photography of technical hardware components, specifically a high-precision processor surface with microscopic paths, shot with shallow depth of field in a cool monochrome palette. Represents deep tech and rigorous engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1tcBaY349mAN1oYALHDtxq2NMnSgR2lfsIIi5qfrKhVRQFa3dA9kvaA7jGe0ngSCvay0r_yWYOpIgCORmjaxmNBRy8OjvsEnQ0iK9Bud0o3P4vvZv0QRmn0br0V4bh9d4TX9Q-lDlMlblQV6ozbGPAqjnPhoFUze91MCciJ4-aIABfNmpC1neEz_7CjghPIDPDL-K2gJ-ftyDp569-4VrRt_fhl2c4OihMM22RoaQd-po9iNZG5gNlMVP8E6KK0TQ-R9b2uqcAz7-"/>
-</div>
-</td>
-<td class="px-6 py-6">
-<span class="font-body-md font-semibold text-primary block">Optimizing React for Edge Runtime</span>
-<span class="font-label-mono text-[12px] text-secondary">ID: BLOG-6112</span>
-</td>
-<td class="px-6 py-6">
-<span class="px-2 py-1 bg-surface-container-high rounded text-label-mono text-[11px] text-on-surface-variant uppercase">Frontend</span>
-</td>
-<td class="px-6 py-6">
-<div class="flex items-center gap-2">
-<div class="w-6 h-6 rounded-full bg-secondary-container"></div>
-<span class="text-secondary">Elena Voss</span>
-</div>
-</td>
-<td class="px-6 py-6">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-<span class="w-1.5 h-1.5 rounded-full bg-green-600"></span>
-                                        Live
-                                    </span>
-</td>
-<td class="px-6 py-6 text-secondary">Sep 15, 2023</td>
-<td class="px-6 py-6 text-right">
-<button class="text-secondary hover:text-primary transition-colors">
-<span class="material-symbols-outlined">more_horiz</span>
-</button>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<!-- Pagination footer -->
-<div class="px-6 py-4 border-t border-outline-variant flex items-center justify-between">
-<span class="text-secondary font-body-md text-sm">Showing 1 to 4 of 1,284 blogs</span>
-<div class="flex gap-2">
-<button class="px-4 py-2 border border-outline-variant rounded hover:bg-surface-container transition-colors font-body-md text-sm">Previous</button>
-<button class="px-4 py-2 border border-outline-variant rounded hover:bg-surface-container transition-colors font-body-md text-sm">Next</button>
+<div class="col-span-2 space-y-2">
+<label class="font-label-mono text-xs uppercase tracking-wider text-secondary">Biography</label>
+<textarea class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 transition-colors resize-none" rows="3">Lead platform engineer focused on high-performance distributed systems and minimalist interface design.</textarea>
 </div>
 </div>
 </div>
-<!-- Footer Meta -->
-<div class="flex items-center justify-between mt-auto pt-8 pb-12 border-t border-outline-variant/30">
-<div class="flex items-center gap-4">
-<span class="w-2 h-2 rounded-full bg-green-500"></span>
-<span class="font-label-mono text-label-mono text-secondary">All Systems Operational</span>
+<div class="settings-card pb-8">
+<h3 class="font-headline-sm text-headline-sm mb-6">Avatar</h3>
+<div class="flex items-center gap-8">
+<div class="w-24 h-24 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A macro studio shot of an elegant, minimalist black sculpture on a white pedestal, illuminated by soft directional lighting that creates long, clean shadows. This image represents the sophisticated, artistic aesthetic of the BlogSpace brand, emphasizing texture and form over clutter. High contrast black and white composition with a sharp, editorial feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADc_3K_ZXkgp7TtNTtdHLMX6G_p6EPBBXZFL7bIBWV9GVx9oTJwhOaSjYqU3hXLDKpW6A_BgtVUgKvPh7ZLokmr_pPj7V2OEucDig7bBhtT_C0jAi390zJoNAhG1WoHK6FEOKQ0ALymjBbpoC0ho8hpHBx6vfi20QdlYiU4-K8_2Zivt4-RYiUNKaMOOFVqGNbXqz3a3mBT8kboA3ljn8QwFzJ9EJW37OByQAu4WT6Oarfk1HgfeYEJ2Z8EnBwa4Fa3wWfR7W56Ehu"/>
 </div>
-<div class="text-secondary font-label-mono text-label-mono">
-                    © 2023 BLOGSPACE MARKETPLACE ADMIN
-                </div>
+<div class="flex gap-4">
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity">Change Image</button>
+<button class="bg-white border border-outline-variant px-6 py-2 rounded-lg font-medium hover:bg-surface-container-low transition-colors">Remove</button>
+</div>
+</div>
 </div>
 </section>
+<!-- API Keys Section (Hidden by Default) -->
+<section class="tab-content hidden space-y-8" id="tab-api">
+<div class="settings-card pb-8">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-2">API Keys</h3>
+<p class="text-secondary text-sm">Manage your integration keys to access the BlogSpace API.</p>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">add</span>
+                                    Create new key
+                                </button>
+</div>
+<div class="space-y-4">
+<div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant flex items-center justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-primary">Production Key</span>
+<span class="text-[10px] font-label-mono bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded uppercase">Live</span>
+</div>
+<code class="font-label-mono text-sm text-secondary">pk_live_************************3f2a</code>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-secondary hover:text-primary transition-colors"><span class="material-symbols-outlined">content_copy</span></button>
+<button class="p-2 text-secondary hover:text-error transition-colors"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant flex items-center justify-between opacity-70">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-primary">Development Key</span>
+<span class="text-[10px] font-label-mono bg-surface-container-highest text-secondary px-2 py-0.5 rounded uppercase">Test</span>
+</div>
+<code class="font-label-mono text-sm text-secondary">pk_test_************************7g91</code>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-secondary hover:text-primary transition-colors"><span class="material-symbols-outlined">content_copy</span></button>
+<button class="p-2 text-secondary hover:text-error transition-colors"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Appearance Section -->
+<section class="tab-content hidden space-y-8" id="tab-appearance">
+<div class="settings-card pb-8">
+<h3 class="font-headline-sm text-headline-sm mb-6">Interface Theme</h3>
+<div class="grid grid-cols-3 gap-6">
+<button class="group relative text-left">
+<div class="aspect-video bg-white border-2 border-primary rounded-xl overflow-hidden mb-3 ring-4 ring-secondary-container">
+<div class="p-3 space-y-2">
+<div class="h-2 w-1/2 bg-surface-container-highest rounded"></div>
+<div class="h-2 w-full bg-surface-container-low rounded"></div>
+<div class="h-2 w-3/4 bg-surface-container-low rounded"></div>
+</div>
+</div>
+<span class="font-medium text-primary block">Light Editorial</span>
+<span class="text-xs text-secondary">Classic high-contrast minimalist.</span>
+</button>
+<button class="group relative text-left opacity-60 hover:opacity-100 transition-opacity">
+<div class="aspect-video bg-inverse-surface border border-outline-variant rounded-xl overflow-hidden mb-3">
+<div class="p-3 space-y-2">
+<div class="h-2 w-1/2 bg-on-surface-variant rounded"></div>
+<div class="h-2 w-full bg-secondary rounded"></div>
+<div class="h-2 w-3/4 bg-secondary rounded"></div>
+</div>
+</div>
+<span class="font-medium text-primary block">Studio Dark</span>
+<span class="text-xs text-secondary">Low-light for nocturnal focus.</span>
+</button>
+<button class="group relative text-left opacity-60 hover:opacity-100 transition-opacity">
+<div class="aspect-video bg-surface-container border border-outline-variant rounded-xl overflow-hidden mb-3 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-3xl">settings_brightness</span>
+</div>
+<span class="font-medium text-primary block">System Sync</span>
+<span class="text-xs text-secondary">Match OS preferences.</span>
+</button>
+</div>
+</div>
+<div class="settings-card pb-8">
+<h3 class="font-headline-sm text-headline-sm mb-6">Typography Density</h3>
+<div class="flex items-center gap-12">
+<label class="flex items-center gap-3 cursor-pointer">
+<input checked="" class="text-primary focus:ring-primary h-4 w-4" name="density" type="radio"/>
+<span class="font-medium">Standard</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="text-primary focus:ring-primary h-4 w-4" name="density" type="radio"/>
+<span class="font-medium">Compact</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="text-primary focus:ring-primary h-4 w-4" name="density" type="radio"/>
+<span class="font-medium">Expanded</span>
+</label>
+</div>
+</div>
+</section>
+<!-- Form Actions Footer -->
+<div class="flex items-center justify-end gap-4 py-8 border-t border-outline-variant mt-8">
+<button class="px-8 py-3 bg-white border border-outline-variant rounded-lg font-medium hover:bg-surface-container-low transition-colors">Reset Changes</button>
+<button class="px-8 py-3 bg-primary text-white rounded-lg font-medium hover:opacity-90 transition-opacity shadow-sm">Save Preferences</button>
+</div>
+</div>
+</div>
+</div>
 </main>
-<!-- Micro-interaction Scripts -->
+<!-- Success Toast Notification (Hidden by default) -->
+<div class="fixed bottom-12 right-12 bg-primary text-white px-6 py-4 rounded-xl shadow-xl flex items-center gap-4 translate-y-24 opacity-0 transition-all duration-300" id="toast">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="font-medium">Changes saved successfully</span>
+</div>
 <script>
-        // Subtle hover states for the navigation items
-        const navItems = document.querySelectorAll('aside nav a');
-        navItems.forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                if (!item.classList.contains('bg-secondary-container')) {
-                    item.style.transform = 'translateX(4px)';
-                }
+        function switchTab(tabId) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
             });
-            item.addEventListener('mouseleave', () => {
-                item.style.transform = 'translateX(0px)';
+            
+            // Remove active classes from all buttons
+            document.querySelectorAll('aside nav button').forEach(btn => {
+                btn.classList.remove('text-primary', 'font-bold', 'border-primary');
+                btn.classList.add('text-secondary', 'border-transparent');
             });
-        });
 
-        // Search bar focus effect
-        const searchInput = document.querySelector('input[type="text"]');
-        searchInput.addEventListener('focus', () => {
-            searchInput.parentElement.classList.add('ring-2', 'ring-primary/10');
-        });
-        searchInput.addEventListener('blur', () => {
-            searchInput.parentElement.classList.remove('ring-2', 'ring-primary/10');
+            // Show current tab content
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+
+            // Set active button style
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.add('text-primary', 'font-bold', 'border-primary');
+            activeBtn.classList.remove('text-secondary', 'border-transparent');
+        }
+
+        // Mock interaction for Save button
+        document.querySelectorAll('button').forEach(btn => {
+            if(btn.innerText.includes('Save')) {
+                btn.onclick = () => {
+                    const toast = document.getElementById('toast');
+                    toast.classList.remove('translate-y-24', 'opacity-0');
+                    setTimeout(() => {
+                        toast.classList.add('translate-y-24', 'opacity-0');
+                    }, 3000);
+                }
+            }
         });
     </script>
 </body></html>

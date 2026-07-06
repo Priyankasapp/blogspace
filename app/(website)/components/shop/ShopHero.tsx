@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import Hero from '../../public/images/photo1.jpg';
+import Hero from '@/public/images/photo1.jpg';
 // Register the React plugin for GSAP
 gsap.registerPlugin(useGSAP);
 

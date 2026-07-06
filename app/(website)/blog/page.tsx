@@ -1,5 +1,5 @@
 
-import FeaturedPosts from "@/components/blog/FeaturedPost";
+import FeaturedPosts from "@/app/(website)/components/blog/FeaturedPost";
 import Link from "next/link";
 
 export default function BlogIndexPage() {

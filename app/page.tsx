@@ -1,7 +1,6 @@
-import React from 'react'
-import Navbar from '@/components/Navbar'
-import Hero from '@/components/Hero'
-import FeaturedPost from '@/components/blog/FeaturedPost'
+
+import Hero from '@/app/(website)/components/Hero'
+import FeaturedPost from '@/app/(website)/components/blog/FeaturedPost'
 
 const page = () => {
   return (

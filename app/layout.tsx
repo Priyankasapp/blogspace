@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-// 1. Import your layout components (adjust paths based on your folder structure)
-import Navbar from "@/components/Navbar"; 
-import Footer from "@/components/Footer";
+import LayoutWrapper from "@/app/(website)/components/LayoutWrapper"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,19 +29,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full bg-white text-black font-sans flex flex-col">
-        
-        {/* 2. Top Navigation */}
-        <Navbar />
-
-        {/* 3. Main Content Container */}
-        {/* flex-grow ensures the content expands to push the footer down on short pages */}
-        <main className="flex-grow">
-          {children}
-        </main>
-
-        {/* 4. Bottom Footer */}
-        <Footer />
-
+        <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
   );
