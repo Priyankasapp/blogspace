@@ -19,6 +19,15 @@ export interface Product {
   description: string;
   imageSrc: string | StaticImageData;
   link: string;
+
+   pages?: number;
+  format?: string;
+  language?: string;
+  version?: string;
+  lastUpdated?: string;
+  fileSize?: string;
+  features?: string[];
+  
 }
 
 export interface Category {
@@ -96,6 +105,21 @@ export const CURATED_PRODUCTS: Product[] = [
       "Complete guide to building high-performance server-side applications with Next.js.",
     imageSrc: photo1,
     link: "#",
+
+     pages: 320,
+  format: "PDF",
+  language: "English",
+  version: "2.1",
+  lastUpdated: "June 2026",
+  fileSize: "18 MB",
+
+  features: [
+    "320 Pages",
+    "Source Code Included",
+    "Lifetime Updates",
+    "Instant Download",
+    "Certificate of Completion"
+  ],
   },
   {
     id: 2,
@@ -224,32 +248,32 @@ export const FOOTER_LINKS: FooterLink[] = [
   { label: "License Agreement", link: "#" },
 ];
 
-export const posts: Post[] = [
-  {
-    id: 1,
-    category: "Marketing & Growth",
-    title: "Dreading tax season? Our foolproof organization systems",
-    excerpt: "Discover the exactly mapped out frameworks we use to store client receipts, reconcile workflows, and automate end-of-month financials seamlessly.",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800",
-    slug: "tax-season-organization-systems",
-    date: "2026-07-15" 
-  },
-  {
-    id: 2,
-    category: "Operations",
-    title: "How to run an end of year audit on your contract processes",
-    excerpt: "Protect your creative pipeline. Learn how we analyze liability vulnerabilities and structure our onboarding documents for frictionless sign-offs.",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800",
-    slug: "end-of-year-contract-audit",
-    date: "2026-01-22" 
-  },
-  {
-    id: 3,
-    category: "Design Systems",
-    title: "The hidden psychology of neutral spacing grids in editorial layouts",
-    excerpt: "Whitespace isn't passive—it dictates value. Explore why luxury branding guidelines prioritize extensive margins over dense visual data packing.",
-    image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?q=80&w=800",
-    slug: "psychology-of-neutral-spacing-grids",
-    date: "2025-11-05"
-  }
-];
+  export const posts: Post[] = [
+    {
+      id: 1,
+      category: "Marketing & Growth",
+      title: "Dreading tax season? Our foolproof organization systems",
+      excerpt: "Discover the exactly mapped out frameworks we use to store client receipts, reconcile workflows, and automate end-of-month financials seamlessly.",
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800",
+      slug: "tax-season-organization-systems",
+      date: "2026-07-15" 
+    },
+    {
+      id: 2,
+      category: "Operations",
+      title: "How to run an end of year audit on your contract processes",
+      excerpt: "Protect your creative pipeline. Learn how we analyze liability vulnerabilities and structure our onboarding documents for frictionless sign-offs.",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800",
+      slug: "end-of-year-contract-audit",
+      date: "2026-01-22" 
+    },
+    {
+      id: 3,
+      category: "Design Systems",
+      title: "The hidden psychology of neutral spacing grids in editorial layouts",
+      excerpt: "Whitespace isn't passive—it dictates value. Explore why luxury branding guidelines prioritize extensive margins over dense visual data packing.",
+      image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?q=80&w=800",
+      slug: "psychology-of-neutral-spacing-grids",
+      date: "2025-11-05"
+    }
+  ];

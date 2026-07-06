@@ -2,6 +2,7 @@
 "use client";
 
 import { Search, Bell, SunMoon } from "lucide-react";
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -33,10 +34,12 @@ export default function Header() {
             <SunMoon className="w-4 h-4" />
           </button>
           <div className="w-7 h-7 rounded-full overflow-hidden border border-outline-variant bg-neutral-200">
-            <img 
-              className="w-full h-full object-cover" 
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop" 
+            <Image
+              className="w-full h-full object-cover"
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop"
               alt="Admin administrator profile"
+              width={28}
+              height={28}
             />
           </div>
         </div>

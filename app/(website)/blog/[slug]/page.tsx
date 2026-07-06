@@ -1,6 +1,8 @@
 import Link from 'next/link';
-
+import Image from 'next/image';
+import { posts } from '@/public/assets';
 // Next.js 15+ uses a Promise type for asynchronous page params
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -8,11 +10,17 @@ type Props = {
 export default async function BlogPostPage({ params }: Props) {
   // Await your dynamic url parameters safely
   const { slug } = await params;
-  
-  // Transform "tax-season-systems" into "Tax Season Systems" for an elegant title display
-  const cleanTitle = slug
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, (char) => char.toUpperCase());
+  const post = posts.find((post) => post.slug === slug);
+
+  if (!post) {
+    return (
+      <main className="py-24 text-center">
+        <h1 className="text-3xl font-bold">Post not found</h1>
+      </main>
+    );
+  }
+ 
+
 
   return (
     <main className="w-full bg-white px-6 md:px-12 py-16 font-editorial-sans selection:bg-black selection:text-white">
@@ -30,23 +38,50 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Article Meta Header Layout */}
         <div className="space-y-4 border-b border-neutral-100 pb-8">
-          <span className="text-[9px] tracking-[0.3em] uppercase text-neutral-400 font-semibold block">
-            Single Post View
-          </span>
+          <div className="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-neutral-400">
+  <span>{post.category}</span>
+  <span>•</span>
+  <span>{post.date}</span>
+</div>
           <h1 className="font-editorial-serif text-4xl sm:text-5xl md:text-6xl text-neutral-900 leading-tight uppercase tracking-wide">
-            {cleanTitle}
+          {post.title}
           </h1>
         </div>
 
         {/* Content Body Placeholder */}
-        <article className="font-editorial-serif text-lg text-neutral-700 leading-relaxed space-y-6 max-w-2xl italic font-light">
-          <p>
-            This post template is rendering dynamically from your Next.js application core route node. The database lookup identifier evaluates explicitly as: <span className="font-mono not-italic font-bold text-xs bg-neutral-100 px-2 py-1 text-black rounded">{slug}</span>.
-          </p>
-          <p className="font-editorial-sans not-italic text-xs text-neutral-400 tracking-wide leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-        </article>
+        <article className="space-y-8">
+  <Image
+    src={post.image}
+    alt={post.title}
+    width={1200}
+    height={500}
+    className="w-full h-[500px] object-cover rounded-xl"
+  />
+
+  <p className="text-lg text-neutral-600 leading-8">
+    {post.excerpt}
+  </p>
+
+  <div className="space-y-6 text-neutral-700 leading-8">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Voluptatibus officiis molestiae ipsum maiores aspernatur
+      pariatur. Ducimus, nihil quos.
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Repudiandae inventore laborum natus, explicabo autem
+      deserunt quos voluptatibus maxime.
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Consequuntur, officia. Reprehenderit aspernatur quas
+      consequatur dolores molestiae doloremque.
+    </p>
+  </div>
+</article>
 
       </div>
     </main>
