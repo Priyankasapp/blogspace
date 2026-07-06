@@ -1,41 +1,51 @@
-/* 1. ALL @imports must be at the very top */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+/* 1. Imports at the very top */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
-/* 2. Then your Tailwind directives */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* 3. Variables and theme configurations */
+/* 2. Variables and custom v4 token definitions */
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
+  --background: #fdf8f8;
+  --foreground: #1c1b1b;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   
+  /* Brand Theme Color Map */
+  --color-on-background: #1c1b1b;
+  --color-tertiary: #000000;
+  --color-secondary-container: #e1dfdf;
+  --color-outline-variant: #c4c7c7;
+  --color-surface-container-low: #f7f3f2;
+  --color-surface-container-high: #ebe7e6;
+  --color-on-surface-variant: #444748;
+  --color-surface: #fdf8f8;
+  --color-primary: #000000;
+  --color-secondary: #5e5e5e;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+
+  /* Typography Layout Engine Rules */
   --font-editorial-serif: 'Cormorant Garamond', serif;
   --font-editorial-sans: 'Montserrat', sans-serif;
+  --font-label-mono: 'JetBrains Mono', monospace;
 }
 
-/* 4. Base layer styles */
+/* 3. Global Base Layer Overrides */
 @layer base {
   body {
-    background-color: var(--background);
-    color: var(--foreground);
-    @apply antialiased;
+    background-color: var(--color-surface);
+    color: var(--color-on-background);
+    font-family: var(--font-editorial-sans);
+    @apply antialiased overflow-x-hidden;
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4, .font-serif {
     font-family: var(--font-editorial-serif);
   }
 
-  nav a {
-    font-family: var(--font-editorial-sans);
+  code, pre, .font-mono {
+    font-family: var(--font-label-mono);
   }
 }

@@ -3,379 +3,439 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>BlogSpace Shop | Premium Developer Resources</title>
+<title>Blogs Management | Marketplace Admin</title>
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
 <!-- Material Symbols -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Design System Configuration -->
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "tertiary-fixed-dim": "#cac6c4",
-                        "tertiary-fixed": "#e6e2df",
-                        "on-surface": "#1c1b1b",
-                        "primary-container": "#1c1b1b",
-                        "surface-container-lowest": "#ffffff",
-                        "on-tertiary-container": "#868382",
-                        "tertiary": "#000000",
-                        "on-primary-fixed": "#1c1b1b",
-                        "surface-tint": "#5f5e5e",
-                        "surface-container-highest": "#e5e2e1",
-                        "outline-variant": "#c4c7c7",
-                        "on-secondary-container": "#626262",
-                        "secondary-container": "#e1dfdf",
-                        "inverse-primary": "#c8c6c5",
-                        "on-tertiary-fixed-variant": "#484645",
-                        "on-surface-variant": "#444748",
-                        "error": "#ba1a1a",
-                        "primary-fixed": "#e5e2e1",
-                        "on-primary": "#ffffff",
-                        "surface-dim": "#ddd9d8",
-                        "surface": "#fdf8f8",
-                        "on-background": "#1c1b1b",
-                        "tertiary-container": "#1c1b1a",
-                        "on-secondary-fixed": "#1b1c1c",
-                        "on-primary-fixed-variant": "#474746",
-                        "on-primary-container": "#858383",
-                        "error-container": "#ffdad6",
-                        "surface-variant": "#e5e2e1",
-                        "secondary": "#5e5e5e",
-                        "surface-container-low": "#f7f3f2",
-                        "background": "#fdf8f8",
-                        "on-tertiary-fixed": "#1c1b1a",
-                        "on-tertiary": "#ffffff",
-                        "on-error": "#ffffff",
-                        "surface-container-high": "#ebe7e6",
-                        "on-error-container": "#93000a",
-                        "primary": "#000000",
-                        "inverse-surface": "#313030",
-                        "surface-bright": "#fdf8f8",
-                        "secondary-fixed": "#e4e2e2",
-                        "on-secondary-fixed-variant": "#464747",
-                        "surface-container": "#f1edec",
-                        "outline": "#747878",
-                        "inverse-on-surface": "#f4f0ef",
-                        "secondary-fixed-dim": "#c7c6c6",
-                        "primary-fixed-dim": "#c8c6c5",
-                        "on-secondary": "#ffffff"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "unit": "8px",
-                        "margin-desktop": "64px",
-                        "container-max": "1280px",
-                        "gutter": "32px",
-                        "margin-mobile": "20px"
-                    },
-                    "fontFamily": {
-                        "display-lg": ["\"Source Serif 4\""],
-                        "label-mono": ["JetBrains Mono"],
-                        "display-lg-mobile": ["\"Source Serif 4\""],
-                        "headline-sm": ["\"Source Serif 4\""],
-                        "headline-md": ["\"Source Serif 4\""],
-                        "body-md": ["Inter"],
-                        "body-lg": ["Inter"]
-                    },
-                    "fontSize": {
-                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                        "label-mono": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                        "display-lg-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                        "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                        "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}]
-                    }
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#1c1b1b",
+                    "tertiary": "#000000",
+                    "secondary-container": "#e1dfdf",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#313030",
+                    "inverse-primary": "#c8c6c5",
+                    "secondary-fixed-dim": "#c7c6c6",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#1c1b1a",
+                    "surface": "#fdf8f8",
+                    "primary-fixed": "#e5e2e1",
+                    "surface-variant": "#e5e2e1",
+                    "primary": "#000000",
+                    "on-surface-variant": "#444748",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "outline-variant": "#c4c7c7",
+                    "tertiary-fixed": "#e6e2df",
+                    "inverse-on-surface": "#f4f0ef",
+                    "surface-dim": "#ddd9d8",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#484645",
+                    "secondary-fixed": "#e4e2e2",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-tertiary-container": "#868382",
+                    "on-secondary-container": "#626262",
+                    "surface-container-high": "#ebe7e6",
+                    "surface-container": "#f1edec",
+                    "secondary": "#5e5e5e",
+                    "on-surface": "#1c1b1b",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#5f5e5e",
+                    "on-primary-fixed-variant": "#474746",
+                    "primary-container": "#1c1b1b",
+                    "on-primary-container": "#858383",
+                    "tertiary-fixed-dim": "#cac6c4",
+                    "tertiary-container": "#1c1b1a",
+                    "surface-bright": "#fdf8f8",
+                    "on-secondary": "#ffffff",
+                    "outline": "#747878",
+                    "background": "#fdf8f8",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed-variant": "#464747",
+                    "surface-container-low": "#f7f3f2"
             },
-        }
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "label-mono": ["JetBrains Mono"],
+                    "headline-md": ["\"Source Serif 4\""],
+                    "body-lg": ["Inter"],
+                    "display-lg-mobile": ["\"Source Serif 4\""],
+                    "display-lg": ["\"Source Serif 4\""],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["\"Source Serif 4\""]
+            },
+            "fontSize": {
+                    "label-mono": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
     </script>
 <style>
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .stagger-1 { transition-delay: 0.1s; }
-        .stagger-2 { transition-delay: 0.2s; }
-        .stagger-3 { transition-delay: 0.3s; }
-        .stagger-4 { transition-delay: 0.4s; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-        body { background-color: #fdf8f8; color: #1c1b1b; scroll-behavior: smooth; }
-        .product-card:hover img { transform: scale(1.02); transition: transform 0.4s ease; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+        }
+        body {
+            background-color: #fdf8f8;
+            color: #1c1b1b;
+            -webkit-font-smoothing: antialiased;
+        }
+        .editorial-shadow {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .table-row-hover:hover {
+            background-color: #f7f3f2;
+        }
     </style>
 </head>
-<body class="bg-background">
-<!-- TopNavBar -->
-<header class="w-full top-0 border-b border-outline-variant bg-background z-50 sticky">
-<nav class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-container-max mx-auto">
-<div class="font-display-lg text-display-lg font-bold text-primary">BlogSpace</div>
-<div class="hidden md:flex items-center gap-8">
-<a class="text-secondary hover:text-primary transition-colors duration-100 font-body-md text-body-md" href="#">Authors</a>
-<a class="text-secondary hover:text-primary transition-colors duration-100 font-body-md text-body-md" href="#">Library</a>
-<a class="text-secondary hover:text-primary transition-colors duration-100 font-body-md text-body-md" href="#">Resources</a>
-<a class="text-primary font-bold border-b border-primary pb-1 font-body-md text-body-md" href="#">Marketplace</a>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- SideNavBar Anchor -->
+<aside class="w-64 h-screen fixed left-0 top-0 flex flex-col h-full p-unit bg-surface border-r border-outline-variant z-50 transition-all duration-100 ease-in-out">
+<div class="px-4 py-6 mb-8">
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary">Marketplace</h1>
+<p class="font-label-mono text-label-mono text-secondary mt-1">Admin Console</p>
+</div>
+<nav class="flex-1 space-y-1 px-2">
+<!-- Dashboard -->
+<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body-md">Dashboard</span>
+</a>
+<!-- Blogs - ACTIVE -->
+<a class="flex items-center gap-3 px-3 py-2 bg-secondary-container text-primary font-semibold rounded-lg" href="#">
+<span class="material-symbols-outlined">article</span>
+<span class="font-body-md">Blogs</span>
+</a>
+<!-- Products -->
+<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-body-md">Products</span>
+</a>
+<!-- Documentation -->
+<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-body-md">Documentation</span>
+</a>
+<!-- Analytics -->
+<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-body-md">Analytics</span>
+</a>
+<!-- Orders -->
+<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-body-md">Orders</span>
+</a>
+<!-- Users -->
+<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-body-md">Users</span>
+</a>
+<!-- Settings -->
+<a class="flex items-center gap-3 px-3 py-2 text-secondary hover:text-primary hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-md">Settings</span>
+</a>
+</nav>
+<div class="px-2 mt-auto pb-4">
+<button class="w-full flex items-center gap-3 px-3 py-2 text-error hover:bg-error-container/20 transition-colors rounded-lg">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-body-md">Logout</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 flex flex-col min-h-screen">
+<!-- TopNavBar Anchor -->
+<header class="sticky top-0 z-40 bg-surface/80 backdrop-blur-md border-b border-outline-variant flex items-center justify-between h-16 px-margin-desktop transition-opacity duration-150">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</span>
+<input class="block w-full pl-10 pr-3 py-2 border-none bg-surface-container-low rounded-full font-body-md focus:ring-1 focus:ring-primary text-on-background placeholder:text-secondary/60" placeholder="Search blog posts..." type="text"/>
+</div>
 </div>
 <div class="flex items-center gap-6">
-<button class="material-symbols-outlined text-primary p-2 hover:bg-surface-container-low rounded-full transition-all cursor-pointer">shopping_cart</button>
-<button class="bg-primary text-on-primary px-6 py-2 font-body-md text-body-md hover:opacity-80 transition-opacity cursor-pointer">Sign In</button>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-secondary hover:text-primary font-body-md transition-colors" href="#">Docs</a>
+<a class="text-secondary hover:text-primary font-body-md transition-colors" href="#">Help</a>
+<a class="text-secondary hover:text-primary font-body-md transition-colors" href="#">Status</a>
 </div>
-</nav>
-</header>
-<main class="max-w-container-max mx-auto">
-<!-- Hero Section -->
-<section class="flex flex-col md:flex-row items-center gap-16 px-margin-desktop py-24 reveal">
-<div class="w-full md:w-1/2 space-y-8">
-<div class="space-y-2">
-<p class="font-label-mono text-label-mono text-secondary tracking-[0.2em]">PREMIUM COLLECTION // DIGITAL MARKETPLACE</p>
-<h1 class="font-display-lg text-display-lg text-primary">Developer Resources</h1>
-</div>
-<p class="font-body-lg text-body-lg text-secondary max-w-lg">
-                    Elevate your engineering craft with our curated selection of technical editorial guides, high-performance UI kits, and architectural blueprints designed for the modern web professional.
-                </p>
-<div class="pt-4 flex items-center gap-8">
-<button class="bg-primary text-on-primary px-10 py-4 font-body-md text-body-md hover:opacity-90 transition-opacity flex items-center gap-2">
-                        Explore Collection
-                        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+<div class="flex items-center gap-4 border-l border-outline-variant pl-6">
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
 </button>
-<a class="font-body-md text-body-md text-primary border-b border-primary hover:opacity-60 transition-opacity" href="#">Browse Categories</a>
-</div>
-</div>
-<div class="w-full md:w-1/2 p-8">
-<div class="relative aspect-[4/3] bg-surface-container-low flex items-center justify-center p-12 group overflow-hidden">
-<img alt="Editorial product composition" class="w-full h-full object-contain relative z-10 transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLuyqW6v2SY3eoRcqokCfsHMYiBZUczYV-8F4wr3AplMYxMAMsM0jbCfc-sElD0sa8I2wonEjuhmq9umsN9nF745GryvfixM9E0kzNU5ukMgdSC_ZUyNMclSjZ1DHlVfSMmFiD35sw9IKxF0teoK0JntY8z7F3-JldUVHhYtDi2SVvOeQZ3tSYSBV7t7uc-lo1_FtdoFosgqYYB25SKv9-URm_dn21zkV9Pc5AQHa2J4L6UhG5GpT9RSQseu"/>
-<div class="absolute inset-0 border border-outline-variant/30 m-6"></div>
-</div>
-</div>
-</section>
-<!-- Featured Categories -->
-<section class="px-margin-desktop py-20 bg-surface-container-lowest">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
-<div class="reveal stagger-1 flex flex-col items-center p-12 border border-outline-variant hover:border-primary transition-colors cursor-pointer group bg-background">
-<span class="material-symbols-outlined text-[48px] text-secondary group-hover:text-primary transition-colors mb-6">menu_book</span>
-<h3 class="font-headline-sm text-headline-sm text-primary">Books</h3>
-</div>
-<div class="reveal stagger-2 flex flex-col items-center p-12 border border-outline-variant hover:border-primary transition-colors cursor-pointer group bg-background">
-<span class="material-symbols-outlined text-[48px] text-secondary group-hover:text-primary transition-colors mb-6">layers</span>
-<h3 class="font-headline-sm text-headline-sm text-primary">Templates</h3>
-</div>
-<div class="reveal stagger-3 flex flex-col items-center p-12 border border-outline-variant hover:border-primary transition-colors cursor-pointer group bg-background">
-<span class="material-symbols-outlined text-[48px] text-secondary group-hover:text-primary transition-colors mb-6">grid_view</span>
-<h3 class="font-headline-sm text-headline-sm text-primary">UI Kits</h3>
-</div>
-<div class="reveal stagger-4 flex flex-col items-center p-12 border border-outline-variant hover:border-primary transition-colors cursor-pointer group bg-background">
-<span class="material-symbols-outlined text-[48px] text-secondary group-hover:text-primary transition-colors mb-6">school</span>
-<h3 class="font-headline-sm text-headline-sm text-primary">Courses</h3>
-</div>
-</div>
-</section>
-<!-- Featured Products -->
-<section class="px-margin-desktop py-24 space-y-16">
-<div class="flex justify-between items-end border-b border-outline-variant pb-8 reveal">
-<h2 class="font-headline-md text-headline-md text-primary">Curated Selections</h2>
-<a class="font-label-mono text-label-mono text-secondary hover:text-primary flex items-center gap-2" href="#">VIEW ALL PRODUCTS <span class="material-symbols-outlined text-[16px]">east</span></a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-x-gutter gap-y-16">
-<!-- Product 1 -->
-<div class="product-card reveal stagger-1 space-y-6 group">
-<div class="bg-surface-container flex items-center justify-center p-12 relative overflow-hidden">
-<img alt="Next.js Mastery book cover" class="w-full aspect-[3/4] object-cover shadow-2xl transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLsuBKpKK56v-IuuYrPsvvq5klHnzsPS-H74Rk2M1YP66se-gEdr4CgIXSxuZ3pk-khLSLsQyD8FLC34Jp1Obt_h9gPk-starGwV96KPwaoJjAuWpQZEo1xIG9SRNxz6qHo7heDhky1yak5t3FZK62QTim3JlAExbiSNAhK5aSP7AbDsQVBX-TgQpEqLbzGb0wpSpyk-m-e-hSMrjArkZziX5eB1cX-hoYEfYWrS87RsJdxQR9HwHKEVSgBz"/>
-<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
-</div>
-<div class="space-y-3">
-<div class="flex justify-between items-center">
-<span class="font-label-mono text-[11px] text-secondary uppercase tracking-widest">Digital Book // $49</span>
-<span class="material-symbols-outlined text-[18px] text-outline cursor-pointer hover:text-primary">bookmark</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary">Next.js Mastery</h3>
-<p class="font-body-md text-body-md text-secondary line-clamp-2">Complete guide to building high-performance server-side applications with Next.js 14.</p>
-<button class="w-full border border-outline hover:border-primary py-3 font-body-md text-body-md transition-all mt-4">View Product</button>
-</div>
-</div>
-<!-- Product 2 -->
-<div class="product-card reveal stagger-2 space-y-6 group">
-<div class="bg-surface-container flex items-center justify-center p-12 relative overflow-hidden">
-<img alt="React Architecture book cover" class="w-full aspect-[3/4] object-cover shadow-2xl transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLuDsywJfjV77L6DsXfZ94DolqoFJAkDqT5Xl8WS9-SbqO4nFkozQK9cvVwh5-foVfK42QLqSxE3k2vfq98Z06CDlVHB-BvvkQesN-ldbwbkcLWaEfl6RXMcD77g0OxH53O7zEUuvQ_vADGZRLPg9H5SDg3aqKgi9JNTjh5W3uFfrw6UqQJTKL67djy9f8wWYM_2Na2yHOe2u0DkFn5IcckkQvSCvZwGGT442Xu5CdrurcOZBgF1Lu4eaTRa"/>
-<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
-</div>
-<div class="space-y-3">
-<div class="flex justify-between items-center">
-<span class="font-label-mono text-[11px] text-secondary uppercase tracking-widest">Digital Book // $55</span>
-<span class="material-symbols-outlined text-[18px] text-outline cursor-pointer hover:text-primary">bookmark</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary">React Architecture</h3>
-<p class="font-body-md text-body-md text-secondary line-clamp-2">Advanced patterns for scalable frontend systems and complex state management.</p>
-<button class="w-full border border-outline hover:border-primary py-3 font-body-md text-body-md transition-all mt-4">View Product</button>
-</div>
-</div>
-<!-- Product 3 -->
-<div class="product-card reveal stagger-3 space-y-6 group">
-<div class="bg-surface-container flex items-center justify-center p-12 relative overflow-hidden">
-<img alt="Editorial UI Kit book cover" class="w-full aspect-[3/4] object-cover shadow-2xl transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLtNpKHeaij4p_QswGapzlVWbFz6t-xdeMoMwQh4crrl9K4IyLcK9ETj__BsbZx5ATvGty4yOlVuK25s_gX7-dzoBClfXMOLwVY8e0DQ2A5uDFH6DeBJC_U9R5UwcGx7v2GKdodlTxkh1PyUwSd4WCOwSpwK_IxMJl64WLpwWsp5OdrqycWgafeAx0r5m6hR-DMlN25l9e7PrB-uu93uMgeHW8PX01VHQoSHA4pmlGGWbhYPxn2u18AdQ70"/>
-<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
-</div>
-<div class="space-y-3">
-<div class="flex justify-between items-center">
-<span class="font-label-mono text-[11px] text-secondary uppercase tracking-widest">UI Kit // $89</span>
-<span class="material-symbols-outlined text-[18px] text-outline cursor-pointer hover:text-primary">bookmark</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary">Editorial UI Kit</h3>
-<p class="font-body-md text-body-md text-secondary line-clamp-2">A collection of premium components designed for high-end technical blogs and documentation.</p>
-<button class="w-full border border-outline hover:border-primary py-3 font-body-md text-body-md transition-all mt-4">View Product</button>
-</div>
-</div>
-<!-- Product 4 -->
-<div class="product-card reveal stagger-1 space-y-6 group">
-<div class="bg-surface-container flex items-center justify-center p-12 relative overflow-hidden">
-<img alt="TypeScript Handbook book cover" class="w-full aspect-[3/4] object-cover shadow-2xl transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLsnnYWS1E06QflqXwThaPHUjABUQUeKV_92RK4duzN6uDpOK4yQeFNRviXRjGwTDUx06jpKHr9-MJApNqauvLceZIbMiq5S73VsUVJVpVBG7LFYAghrpqrheFGZLKv1ZYN8co0xBi7IMActQ4QQ9oiWylEIozizzmJJ_Lkcc-Xh9V9kZj0BAp9RYTBKG7xwNSs8mCurYxajiH3DwsA68lI_ej18MXYKk2ThaQY0FWnZxZGtt1EEs1qUVUI"/>
-<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
-</div>
-<div class="space-y-3">
-<div class="flex justify-between items-center">
-<span class="font-label-mono text-[11px] text-secondary uppercase tracking-widest">Handbook // $42</span>
-<span class="material-symbols-outlined text-[18px] text-outline cursor-pointer hover:text-primary">bookmark</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary">TypeScript Handbook</h3>
-<p class="font-body-md text-body-md text-secondary line-clamp-2">The definitive guide to type safety and advanced TypeScript features for engineers.</p>
-<button class="w-full border border-outline hover:border-primary py-3 font-body-md text-body-md transition-all mt-4">View Product</button>
-</div>
-</div>
-<!-- Product 5 -->
-<div class="product-card reveal stagger-2 space-y-6 group">
-<div class="bg-surface-container flex items-center justify-center p-12 relative overflow-hidden">
-<img alt="Dev Portfolio template cover" class="w-full aspect-[3/4] object-cover shadow-2xl transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLtJbuLDefoiiA2Yp6DqATp6uUvJk-pOyMpejxrFDZcWLp8wduF4gX0eIxm04ByiZdNKomYEYTrhrZrhh_KLcuuYbsMhJqp9Hv5ZNysJho3-KBInymcGu5hmE9ZWWBA_rJ-UjBs57IcKkrag3kbavhiOKWE6TI_3n1mEJVpdCSOf7aZJ5UBMIVQQGgSjvNik0crpGi7i2ryc9B-2xeFTP2RXElXyV4PvC2m6Cc_tq3ckthGAALoK_YxH7Xyf"/>
-<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
-</div>
-<div class="space-y-3">
-<div class="flex justify-between items-center">
-<span class="font-label-mono text-[11px] text-secondary uppercase tracking-widest">Template // $35</span>
-<span class="material-symbols-outlined text-[18px] text-outline cursor-pointer hover:text-primary">bookmark</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary">Dev Portfolio</h3>
-<p class="font-body-md text-body-md text-secondary line-clamp-2">A minimalist, SEO-optimized portfolio template for modern developers.</p>
-<button class="w-full border border-outline hover:border-primary py-3 font-body-md text-body-md transition-all mt-4">View Product</button>
-</div>
-</div>
-<!-- Product 6 -->
-<div class="product-card reveal stagger-3 space-y-6 group">
-<div class="bg-surface-container flex items-center justify-center p-12 relative overflow-hidden">
-<img alt="Node.js Guide book cover" class="w-full aspect-[3/4] object-cover shadow-2xl transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLtGnjzass13Zma1brxSA-0mexjJ3k09UlavK-HskYsFmtDU3HjsGnS7-AyVSTF3kfJv-ARD1STXnKODzociTz5eWC6xxsQ3s5O_cmlIOa3u6etO6qZPkfLGz7Zx5EAV8UkdVpcucdqBDHZBPHQpzBxvQ5dWb3Z21aSWWAwvgR61NRJB1tGKfg1S52lU4X6xpmYd-TPag7D0orYxUpk3S3GaaQV5oPCyfwkzMQ-mc7LH4MQrCt9aGRB3Yq9r"/>
-<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
-</div>
-<div class="space-y-3">
-<div class="flex justify-between items-center">
-<span class="font-label-mono text-[11px] text-secondary uppercase tracking-widest">Digital Book // $52</span>
-<span class="material-symbols-outlined text-[18px] text-outline cursor-pointer hover:text-primary">bookmark</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary">Node.js Guide</h3>
-<p class="font-body-md text-body-md text-secondary line-clamp-2">Deep dive into backend architecture, streaming, and performance optimization.</p>
-<button class="w-full border border-outline hover:border-primary py-3 font-body-md text-body-md transition-all mt-4">View Product</button>
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">contrast</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Professional corporate headshot of a female administrator with a neutral expression, clean lighting, high resolution, minimalist aesthetic in a modern studio environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5k7gRtBQPrqn6XjahUDFZPIjtEFzqzS15tzGugZJDAkMJrYDe-CuPHUabV5buVeokYyn6hJErM5SH41TCUZ5I7JptbWHlK4hfK900vzeTx5RiZSwbJgZKJmiLw_kHl_fi0jNQHhJQNKUWrd41AIDwxbO60Pufng_2sjc4tpMUKokYhYeb6tQzHjrqp-w0Z9Ys2qhb7fkq7i5uX2Q4ZBHuHQfJGC8MWIqPlXcYwy1KyIyujandPJQx6cfBtBpk4NLOfBs820hG0fta"/>
 </div>
 </div>
 </div>
-</section>
-<!-- Trust & Community -->
-<section class="px-margin-desktop py-24 bg-surface">
-<div class="grid grid-cols-1 md:grid-cols-3 border-t border-b border-outline-variant divide-x divide-outline-variant">
-<div class="p-16 flex flex-col gap-4 reveal stagger-1">
-<span class="material-symbols-outlined text-primary text-[32px]">download_done</span>
-<h4 class="font-headline-sm text-headline-sm text-primary">Instant Download</h4>
-<p class="font-body-md text-body-md text-secondary">Access your files immediately after purchase in your member dashboard.</p>
+</header>
+<!-- Canvas Content -->
+<section class="p-margin-desktop flex-1">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="max-w-2xl">
+<h2 class="font-display-lg text-display-lg text-on-background leading-tight">Editorial Management</h2>
+<p class="font-body-lg text-body-lg text-secondary mt-4 max-w-lg">Manage, edit, and publish your technical blog content across the marketplace ecosystem.</p>
 </div>
-<div class="p-16 flex flex-col gap-4 reveal stagger-2">
-<span class="material-symbols-outlined text-primary text-[32px]">update</span>
-<h4 class="font-headline-sm text-headline-sm text-primary">Lifetime Updates</h4>
-<p class="font-body-md text-body-md text-secondary">Receive all future versions and improvements at no additional cost.</p>
-</div>
-<div class="p-16 flex flex-col gap-4 reveal stagger-3">
-<span class="material-symbols-outlined text-primary text-[32px]">verified</span>
-<h4 class="font-headline-sm text-headline-sm text-primary">Production Ready</h4>
-<p class="font-body-md text-body-md text-secondary">Extensively tested code and assets ready for real-world application.</p>
+<div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-lg font-body-md font-semibold hover:bg-tertiary transition-all duration-100 flex items-center gap-2 editorial-shadow">
+<span class="material-symbols-outlined">add</span>
+                        Create Blog
+                    </button>
 </div>
 </div>
-<!-- Stats Section -->
-<div class="py-24 grid grid-cols-1 md:grid-cols-3 text-center gap-16 reveal">
-<div class="space-y-2">
-<div class="font-display-lg text-[72px] text-primary">10K+</div>
-<div class="font-label-mono text-label-mono text-secondary uppercase tracking-[0.2em]">GLOBAL DEVELOPERS</div>
+<!-- Stats/Metrics High-Level -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-12">
+<div class="bg-surface p-6 border border-outline-variant rounded-xl transition-all hover:border-primary">
+<p class="font-label-mono text-label-mono text-secondary uppercase mb-2">Total Posts</p>
+<p class="font-headline-sm text-headline-sm">1,284</p>
 </div>
-<div class="space-y-2">
-<div class="font-display-lg text-[72px] text-primary">450+</div>
-<div class="font-label-mono text-label-mono text-secondary uppercase tracking-[0.2em]">CURATED RESOURCES</div>
+<div class="bg-surface p-6 border border-outline-variant rounded-xl transition-all hover:border-primary">
+<p class="font-label-mono text-label-mono text-secondary uppercase mb-2">Published</p>
+<p class="font-headline-sm text-headline-sm">842</p>
 </div>
-<div class="space-y-2">
-<div class="font-display-lg text-[72px] text-primary">99.9%</div>
-<div class="font-label-mono text-label-mono text-secondary uppercase tracking-[0.2em]">SATISFACTION RATE</div>
+<div class="bg-surface p-6 border border-outline-variant rounded-xl transition-all hover:border-primary">
+<p class="font-label-mono text-label-mono text-secondary uppercase mb-2">Drafts</p>
+<p class="font-headline-sm text-headline-sm">412</p>
+</div>
+<div class="bg-surface p-6 border border-outline-variant rounded-xl transition-all hover:border-primary">
+<p class="font-label-mono text-label-mono text-secondary uppercase mb-2">Monthly Views</p>
+<p class="font-headline-sm text-headline-sm">45.2k</p>
 </div>
 </div>
-</section>
-<!-- Newsletter Section -->
-<section class="px-margin-desktop py-32 flex flex-col items-center text-center reveal">
-<div class="max-w-2xl space-y-8">
-<h2 class="font-display-lg text-display-lg text-primary">Stay Inspired</h2>
-<p class="font-body-lg text-body-lg text-secondary">Join our community of 10,000+ engineers receiving bi-weekly updates on new resources, design patterns, and technical deep dives.</p>
-<form class="flex flex-col md:flex-row gap-0 border border-primary w-full p-1 mt-8">
-<input class="flex-1 bg-transparent border-none focus:ring-0 px-6 py-4 font-body-md text-body-md text-primary" placeholder="Your email address" type="email"/>
-<button class="bg-primary text-on-primary px-12 py-4 font-body-md text-body-md hover:opacity-90 transition-opacity">Subscribe</button>
-</form>
-<p class="font-label-mono text-[11px] text-secondary">NO SPAM. JUST PURE TECHNICAL QUALITY.</p>
+<!-- Management Table (Stripe-like) -->
+<div class="bg-surface border border-outline-variant rounded-xl overflow-hidden mb-12 editorial-shadow">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-low border-b border-outline-variant">
+<tr>
+<th class="px-6 py-4 font-label-mono text-label-mono text-secondary">Cover</th>
+<th class="px-6 py-4 font-label-mono text-label-mono text-secondary">Blog Title</th>
+<th class="px-6 py-4 font-label-mono text-label-mono text-secondary">Category</th>
+<th class="px-6 py-4 font-label-mono text-label-mono text-secondary">Author</th>
+<th class="px-6 py-4 font-label-mono text-label-mono text-secondary">Status</th>
+<th class="px-6 py-4 font-label-mono text-label-mono text-secondary">Publish Date</th>
+<th class="px-6 py-4 font-label-mono text-label-mono text-secondary text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Row 1 -->
+<tr class="table-row-hover transition-colors group">
+<td class="px-6 py-6">
+<div class="w-16 h-10 rounded overflow-hidden bg-surface-container border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist architectural photography of a modern concrete building against a bright clear sky, captured in a high-key light-mode aesthetic with strong geometric shadows. The image feels professional, intellectual, and high-end." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdWwMISAjPhMVe28vM9GAKoIFX3jfqRQOTcWjHtPfEwCIG07Bt-vESDl7_4Q-zDT0mCn579wsj2ICtKOpRQ9d3PThgfQwuoUuID-Vkeuo7bu4lFGraq01ZDs8dj_qLkX5BDVcWTZRk8Qea5GeFjYMFexJ9PKagYntCu3wQB-tRgNK5Uy5sUVsrmOuMdIeCRQq2ITnlevoTGSWlsCTeKIBquLbrrPbwa--2bTv8vkJAN01cLVbWOkQKWuTKvYg_xDef7ZUwYn7vMIj-"/>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="font-body-md font-semibold text-primary block">Scaling Microservices with Rust</span>
+<span class="font-label-mono text-[12px] text-secondary">ID: BLOG-9921</span>
+</td>
+<td class="px-6 py-6">
+<span class="px-2 py-1 bg-surface-container-high rounded text-label-mono text-[11px] text-on-surface-variant uppercase">Architecture</span>
+</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container"></div>
+<span class="text-secondary">Alex Rivera</span>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+<span class="w-1.5 h-1.5 rounded-full bg-green-600"></span>
+                                        Live
+                                    </span>
+</td>
+<td class="px-6 py-6 text-secondary">Oct 12, 2023</td>
+<td class="px-6 py-6 text-right">
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="table-row-hover transition-colors group">
+<td class="px-6 py-6">
+<div class="w-16 h-10 rounded overflow-hidden bg-surface-container border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Abstract digital artwork with flowing organic lines in grayscale tones, representing fluid dynamics and data flow in a sophisticated, minimalist editorial style. High contrast between deep charcoal and soft white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDfNPsiWUOOUGrabAvCD42PVOGMUfEKxQwGEIm_BWRyn8uN48HUPcrNLe45oMnQ47a67awdmCuvqJ65-0zaYj3IZu8A5IwQnWcsX-kW75xu-3Vul6Wl6JNiyGKbwd6JHzezrKlDkLEwMMLP1P-z8znl3kgG8VDKnypeHLUBy27X3MPRkk7KuuIqhwu4kY4c87me-bHGbsAHFgpnWHze6j6zmfxAN-0tdV6tEmQSOjKHJWKqVJHi5tCRPglfX-rZW--HPtUon3oP4JU"/>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="font-body-md font-semibold text-primary block">Understanding Zero-Knowledge Proofs</span>
+<span class="font-label-mono text-[12px] text-secondary">ID: BLOG-8842</span>
+</td>
+<td class="px-6 py-6">
+<span class="px-2 py-1 bg-surface-container-high rounded text-label-mono text-[11px] text-on-surface-variant uppercase">Cryptography</span>
+</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container"></div>
+<span class="text-secondary">Sarah Jenkins</span>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
+<span class="w-1.5 h-1.5 rounded-full bg-orange-600"></span>
+                                        Draft
+                                    </span>
+</td>
+<td class="px-6 py-6 text-secondary">—</td>
+<td class="px-6 py-6 text-right">
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="table-row-hover transition-colors group">
+<td class="px-6 py-6">
+<div class="w-16 h-10 rounded overflow-hidden bg-surface-container border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Minimalist top-down photograph of a workspace with a single high-end mechanical keyboard and a matte black coffee cup on a light gray desk, highlighting focus, craftsmanship, and productivity in a quiet digital environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgw09YICUaxmxlFi1bCmZdQ5M5tz4fwBvcZm67s4FcIbE9wELKT7fwhQksdC3wJL1nTBjhwSdNQS4uF0r7xK1etdMjk000nSvM-IsHMVg1pCzTh-GBMjfCCZzCorY6zFcFLewDT7T5ZVGHfFgElZmIRjFB0JVzQPTmB9V48pAmpjnuRikGXr2_qvW4k9OyBDY8dGFfYv8bvSiuwLd3DimY8xAmC3qs9ITgNnc1gWsXfB0nRav_ThK6jIClHVmP3XTOZdOlJv-ZS-7Z"/>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="font-body-md font-semibold text-primary block">The Developer Experience Gap</span>
+<span class="font-label-mono text-[12px] text-secondary">ID: BLOG-7231</span>
+</td>
+<td class="px-6 py-6">
+<span class="px-2 py-1 bg-surface-container-high rounded text-label-mono text-[11px] text-on-surface-variant uppercase">DevRel</span>
+</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container"></div>
+<span class="text-secondary">Marcus Chen</span>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+<span class="w-1.5 h-1.5 rounded-full bg-green-600"></span>
+                                        Live
+                                    </span>
+</td>
+<td class="px-6 py-6 text-secondary">Sep 28, 2023</td>
+<td class="px-6 py-6 text-right">
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="table-row-hover transition-colors group">
+<td class="px-6 py-6">
+<div class="w-16 h-10 rounded overflow-hidden bg-surface-container border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Macro photography of technical hardware components, specifically a high-precision processor surface with microscopic paths, shot with shallow depth of field in a cool monochrome palette. Represents deep tech and rigorous engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1tcBaY349mAN1oYALHDtxq2NMnSgR2lfsIIi5qfrKhVRQFa3dA9kvaA7jGe0ngSCvay0r_yWYOpIgCORmjaxmNBRy8OjvsEnQ0iK9Bud0o3P4vvZv0QRmn0br0V4bh9d4TX9Q-lDlMlblQV6ozbGPAqjnPhoFUze91MCciJ4-aIABfNmpC1neEz_7CjghPIDPDL-K2gJ-ftyDp569-4VrRt_fhl2c4OihMM22RoaQd-po9iNZG5gNlMVP8E6KK0TQ-R9b2uqcAz7-"/>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="font-body-md font-semibold text-primary block">Optimizing React for Edge Runtime</span>
+<span class="font-label-mono text-[12px] text-secondary">ID: BLOG-6112</span>
+</td>
+<td class="px-6 py-6">
+<span class="px-2 py-1 bg-surface-container-high rounded text-label-mono text-[11px] text-on-surface-variant uppercase">Frontend</span>
+</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container"></div>
+<span class="text-secondary">Elena Voss</span>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+<span class="w-1.5 h-1.5 rounded-full bg-green-600"></span>
+                                        Live
+                                    </span>
+</td>
+<td class="px-6 py-6 text-secondary">Sep 15, 2023</td>
+<td class="px-6 py-6 text-right">
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination footer -->
+<div class="px-6 py-4 border-t border-outline-variant flex items-center justify-between">
+<span class="text-secondary font-body-md text-sm">Showing 1 to 4 of 1,284 blogs</span>
+<div class="flex gap-2">
+<button class="px-4 py-2 border border-outline-variant rounded hover:bg-surface-container transition-colors font-body-md text-sm">Previous</button>
+<button class="px-4 py-2 border border-outline-variant rounded hover:bg-surface-container transition-colors font-body-md text-sm">Next</button>
+</div>
+</div>
+</div>
+<!-- Footer Meta -->
+<div class="flex items-center justify-between mt-auto pt-8 pb-12 border-t border-outline-variant/30">
+<div class="flex items-center gap-4">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="font-label-mono text-label-mono text-secondary">All Systems Operational</span>
+</div>
+<div class="text-secondary font-label-mono text-label-mono">
+                    © 2023 BLOGSPACE MARKETPLACE ADMIN
+                </div>
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="w-full bottom-0 border-t border-outline-variant bg-surface-container-lowest">
-<div class="w-full px-margin-desktop py-margin-desktop mt-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="flex flex-col gap-4">
-<div class="font-headline-md text-headline-md font-bold text-primary">BlogSpace</div>
-<p class="font-label-mono text-label-mono text-secondary">© 2024 BlogSpace Editorial. All rights reserved.</p>
-</div>
-<div class="flex flex-wrap justify-center gap-12">
-<a class="text-secondary hover:text-primary transition-colors duration-100 font-body-lg text-body-lg" href="#">Terms of Service</a>
-<a class="text-secondary hover:text-primary transition-colors duration-100 font-body-lg text-body-lg" href="#">Privacy Policy</a>
-<a class="text-secondary hover:text-primary transition-colors duration-100 font-body-lg text-body-lg" href="#">License Agreement</a>
-<a class="text-secondary hover:text-primary transition-colors duration-100 font-body-lg text-body-lg underline" href="#">Contact Support</a>
-</div>
-<div class="flex gap-6">
-<a class="material-symbols-outlined text-secondary hover:text-primary" href="#">language</a>
-<a class="material-symbols-outlined text-secondary hover:text-primary" href="#">share</a>
-</div>
-</div>
-</footer>
+<!-- Micro-interaction Scripts -->
 <script>
-        // Reveal animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
+        // Subtle hover states for the navigation items
+        const navItems = document.querySelectorAll('aside nav a');
+        navItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                if (!item.classList.contains('bg-secondary-container')) {
+                    item.style.transform = 'translateX(4px)';
                 }
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        // Micro-interactions for form focus
-        const emailInput = document.querySelector('input[type="email"]');
-        const formContainer = emailInput?.parentElement;
-        if (emailInput && formContainer) {
-            emailInput.addEventListener('focus', () => {
-                formContainer.style.borderColor = '#1c1b1b';
-                formContainer.style.boxShadow = '0 0 0 1px #1c1b1b';
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'translateX(0px)';
             });
-            emailInput.addEventListener('blur', () => {
-                formContainer.style.boxShadow = 'none';
-            });
-        }
+        });
+
+        // Search bar focus effect
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('ring-2', 'ring-primary/10');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('ring-2', 'ring-primary/10');
+        });
     </script>
 </body></html>
