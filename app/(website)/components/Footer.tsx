@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { FOOTER_LINKS } from '@/public/assets';
 import { Globe, Share2 } from 'lucide-react';

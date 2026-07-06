@@ -1,4 +1,4 @@
-
+"use client";
 import FeaturedPosts from "@/app/(website)/components/blog/FeaturedPost";
 
 
